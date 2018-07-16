@@ -47,9 +47,6 @@ keywords = []
 #loop through the pages and extract the keywords.
 for i in range(num_pages):
     words_string = read_file.getPage(i).extractText()
-    # change string to lower_case.
-    words_string = words_string.lower()
-    
     words_list = word_tokenize(words_string)
     
     #Remove same strings from list
@@ -84,7 +81,7 @@ for text in keywords:
 final_keywords = []
 
 for word in keywords:
-    if word not in noise1:
+    if word not in noise:
         final_keywords.append(word)
         
         

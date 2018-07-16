@@ -47,6 +47,9 @@ keywords = []
 #loop through the pages and extract the keywords.
 for i in range(num_pages):
     words_string = read_file.getPage(i).extractText()
+    # change string to lower_case.
+    words_string = words_string.lower()
+    
     words_list = word_tokenize(words_string)
     
     #Remove same strings from list
@@ -65,29 +68,23 @@ for i in range(num_pages):
     
 
 
-
-# Remove words like: Basics©, -2©, -4©, -6©, -8©, -10©, -12©, -14©, -16©, -18©, -20©, -22©
-noise1 = []
-for text in keywords:
-    if all(j.isalpha() or j.isdigit() or j in del_symb for j in text):
-        continue
-    else:
-        noise1.append(text)
         
-      
-        
-        
-##################################        
+    
+    
+# Only noun using nltk.POS_tag
+noun = nltk.pos_tag(keywords)
+    
 final_keywords = []
 
-for word in keywords:
-    if word not in noise:
-        final_keywords.append(word)
-        
-        
+for i in noun:
+    if i[1] == 'NN':
+        final_keywords.append(i[0])
+
+    
+
         
 ################################
-###%%## Save the keyword in text file
+##%%## Save the keyword in text file
 with open('keywords', 'w') as txt_file:
     for words in final_keywords:
         txt_file.write("%s\n"% words)
@@ -95,4 +92,3 @@ with open('keywords', 'w') as txt_file:
 
         
         
-  

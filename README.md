@@ -7,8 +7,7 @@ Extract keywords from pdf file
 python libraries required: PyPDF2, nltk
 
 ##########
-In line 19:
-# write the name of pdf file
+In line 19: write the name of pdf file
 The filename written in keywords.py file- filename = "JavaBasics-notes.pdf"
 
 (and if the pdf file is in different directory then give the complete address to the variable named filename.)

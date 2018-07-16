@@ -47,6 +47,9 @@ keywords = []
 #loop through the pages and extract the keywords.
 for i in range(num_pages):
     words_string = read_file.getPage(i).extractText()
+    # change string to lower_case.
+    words_string = words_string.lower()
+    
     words_list = word_tokenize(words_string)
     
     #Remove same strings from list

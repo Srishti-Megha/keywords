@@ -81,7 +81,7 @@ for text in keywords:
 final_keywords = []
 
 for word in keywords:
-    if word not in noise:
+    if word not in noise1:
         final_keywords.append(word)
         
         

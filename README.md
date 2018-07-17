@@ -16,7 +16,7 @@ For getting the keywords of any other pdf file </br>
 In line 19 of keywords.py file : write the name of pdf file </br>
 The filename written in keywords.py file- filename = "JavaBasics-notes.pdf" </br>
 </br>
-(and if the pdf file is in different directory then give the complete address to the variable named filename.) 
+(and if the pdf file is in different directory then give the complete address to the variable named "filename".) 
 
 
 

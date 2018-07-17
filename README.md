@@ -6,6 +6,7 @@ PyPDF2, nltk
 
 # File
 Run keywords.py file to get the result
+keywords.txt: Contains keywords of "JavaBasics-notes.pdf" file.
 
 # Result
 Final keywords would be saved as text document named "keywords" in the same directory (containing the keywords.py file).
